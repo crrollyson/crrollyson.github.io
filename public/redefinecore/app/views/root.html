@@ -1,0 +1,218 @@
+<div class="navbar navbar-fixed-top" role="navigation">
+    <div class="navbar-header">
+        <a href="default.aspx" class="navbar-brand"><img src="styles/img/logo.png" alt="Jack Henry and Associates" width="166" height=""></a>
+         <button dyxjwea-scroll data-sender="toggle" type="button" class="btn navbar-toggle" aria-expandec="false" aria-controls="navbar"><span class="sr-only">Toggle navigation</span> MENU</button>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse" aria-expanded="false">
+        <ul class="nav navbar-nav navbar-right">
+            <li><a dyxjwea-scroll data-sender="Solutions">Solutions</a></li>
+            <li><a dyxjwea-scroll data-sender="Support">Support</a></li>
+            <li><a dyxjwea-scroll data-sender="Features">Features</a></li>
+            <li><a dyxjwea-scroll data-sender="Contact">Contact</a></li>
+        </ul>
+    </div>
+</div>
+<div class="container-fuild hero">
+    <img src="styles/img/hero.jpg" class="img-responsive" alt="Empower Your Bank To Do More With Silverlake">
+    <div>
+    <div ui-view="modal" autoscroll="false" class="ui-view-container" state-loader></div>
+        <h1>{{ purlName | hyphenToSpace }}, isn't it time for a core that empowers<br>your bank to do more?</h1>
+        <a ui-sref="index.home.modal.video"><img src="styles/img/icon_play.svg" alt="" width="50" height="50"></a>
+    </div>
+</div>
+<div class="container text-center">
+    <div class="row">
+        <div>
+            <h3 class="primary">Meet the newly enhanced SilverLake System<sup>&reg;</sup> from Jack Henry Banking<sup>&reg;</sup></h3>
+            <p>SilverLake from Jack Henry delivers highly customizable, enterprise&ndash;wide automation and will serve as your bank's anytime, anywhere nucleus for constantly changing infrastructure. It maximizes operating flexibility and your bank's technology investment with its open architecture, scalable hardware platform, and proven ability to seamlessly accommodate long&ndash;term growth and the dynamic product, service, and technology trends shaping the financial services industry.</p>
+            <p>Discover how SilverLake is the most nimble, open&ndash;to&ndash;third&ndash;party&ndash;integration core on the market today &hellip; and see why more than 400 banks rely on SilverLake every business day.</p>
+        </div>
+    </div>
+</div>
+<div class="container-fuild gray-light text-center" data-receiver="Solutions">
+    <div class="container">
+        <div class="row">
+            <h3 class="primary">Integrated Solutions that Elevate Your Bank Above Your Competition</h3>
+            <p>Be sure to explore the other information on this site, and discover how our powerful modules give your bank more flexibility than any other core solution on the market today:</p>
+        </div>
+        <div class="row">
+            <div class="card col-sm-6 col-md-4">
+                <img src="styles/img/icon_branchanywhere.svg" alt="" width="100" height="100">
+                <div>
+                    <h4>Branch Anywhere&trade;</h4>
+                    <p>Make your bank mobile and reach on&ndash;the&ndash;go customers like never before.</p>
+                    <button ui-sref="index.home.modal.branch-anywhere" data-event-category="modal" data-event-location="branch-anywhere">Learn More</button>
+                </div>
+            </div>
+            <div class="card col-sm-6 col-md-4">
+                <img src="styles/img/icon_realtime.svg" alt="" width="100" height="100">
+                <div>
+                    <h4>Real Time&trade;</h4>
+                    <p>Electronic transaction processing that actually happens the way it should &ndash; in real time!</p>
+                    <button ui-sref="index.home.modal.real-time" data-event-category="modal" data-event-location="real-time">Learn More</button>
+                </div>
+            </div>
+            <div class="card col-sm-6 col-md-4">
+                <img src="styles/img/icon_poweron.svg" alt="" width="100" height="100">
+                <div>
+                    <h4>PowerOn<sup>&reg;</sup></h4>
+                    <p>Unlock your creativity and make your unique customization needs come true while tapping into new revenue opportunities.</p>
+                    <button ui-sref="index.home.modal.power-on" data-event-category="modal" data-event-location="power-on">Learn More</button>
+                </div>
+            </div>
+            <div class="card col-sm-6 col-md-4">
+                <img src="styles/img/icon_jhaenterpriseworkflow.svg" alt="" width="100" height="100">
+                <div>
+                    <h4><em>jha</em>Enterprise Workflow&trade;</h4>
+                    <p>Streamline and master routine tasks, eliminate redundancies, and boost your ROI.</p>
+                    <button ui-sref="index.home.modal.jhaenterprise-workflow" data-event-category="modal" data-event-location="jhaenterprise-workflow">Learn More</button>
+                </div>
+            </div>
+            <div class="card col-sm-6 col-md-4">
+                <img src="styles/img/icon_digitalsuite.svg" alt="" width="100" height="100">
+                <div>
+                    <h4>Digital Suite</h4>
+                    <p>One cohesive ecosystem that helps you meet today's consumer expectations for account functionality and convenience.</p>
+                    <button ui-sref="index.home.modal.digital-suite" data-event-category="modal" data-event-location="digital-suite">Learn More</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container text-center">
+    <div class="row">
+        <div ng-controller="RotateController">
+            <dyxjwea-rotate components="components" />
+            <!-- IF Not supported, show default -->
+           <!--  <blockquote>
+                "We've always been over&ndash;the&ndash;top pleased with the products and services &hellip; The functionality, customized reporting capabilities, ease&ndash;of&ndash;use, and robustness of SilverLake was our first big Jack Henry Banking 'wow.'"
+                <cite>Todd Nagel, President/CEO, River Valley Bank</cite>
+            </blockquote>
+            <blockquote>
+                "SilverLake and its many complementary solutions and services allow us to offer more to our customers."
+                <cite>Thomas Mathe, Senior Vice President/CTO, First Commonwealth Bank</cite>
+            </blockquote>
+            <blockquote>
+                "Our customers want access to the financial products and services offered at larger banks with the same community bank feel to which they are accustomed. The SilverLake System provides us with the technology to deliver just that."
+                <cite>Wade Peery, Senior VP of Operations and Technology, FirstBank (Nashville, TN)</cite>
+            </blockquote>
+            <blockquote>
+                "Jack Henry Banking's SilverLake System will provide a more holistic view of each customer from a single screen, enabling our team to better understand the entire relationship. That knowledge will directly translate to us optimizing each customer interaction to ensure it's meaningful for us and for the customer."
+                <cite>Darrell Schmith, Executive Vice President and CFO, First PREMIER Bank (Sioux Falls, SD)</cite>
+            </blockquote> -->
+        </div>
+    </div>
+</div>
+<div class="container-fuild primary" data-receiver="Support">
+    <div class="row">
+        <div class="container text-center">
+            <h3>Support and Service Beyond Compare</h3>
+            <h4>Dedication to Excellence in Customer Service</h4>
+            <p>In 1976, Jack Henry &amp; Associates was founded on the premise that strong relationships and sound technology go hand&ndash;in&ndash;hand. Today, with more than 10,800 customers and over 6,000 associates, we combine this idea with the pursuit of one common goal &ndash; excellence in financial services. Our three brands &ndash; Jack Henry Banking<sup>&reg;</sup>, Symitar<sup>&reg;</sup>, and ProfitStars<sup>&reg;</sup> &ndash; support financial institutions of all sizes, diverse businesses outside the financial industry, and other technology providers.</p>
+            <a class="btn" ui-sref="index.home.modal.support">Learn More</a>
+        </div>
+    </div>
+</div>
+<div class="container-fuild gray-dark" data-receiver="Features">
+    <div class="row">
+        <div class="container text-center">
+            <h3>Important Features and Links</h3>
+            <a class="btn" target="_blank" ng-href="http://www.jackhenrybanking.com/Learn-More/Pages/Case-Studies.aspx">Review Case Studies</a>
+            <a class="btn" target="_blank" ng-href="http://www.jackhenrybanking.com/ProductBriefs/JHBPB_SilverLakeSystem.pdf">Read More About Silverlake</a>
+        </div>
+    </div>
+</div>
+<div class="container text-left" data-receiver="Contact">
+    <div class="row">
+        <div class="container">
+            <h3 class="primary">Contact Jack Henry Today</h3>
+            <p>We also offer the best <a ui-sref="index.home.modal.support" title="Customer Service">customer service</a> in the industry and empower you with a  <a ui-sref="index.home.modal.digital-suite" title="digital suite">full digital suite</a> &ndash; one cohesive ecosystem to help you reach more customers with more of the kinds of services they want today &ndash; while boosting your return on your core solution investment. For questions, to schedule a demonstration, or to talk to a current SilverLake bank, call us at 800-299-4453 or email <a target="_blank" ng-href="mailto:redefinecore@jackhenry.com?subject=Tell Me About Redefining Core with Silverlake" title="Tell Me About Redefining Core with Silverlake">redefinecore@jackhenry.com</a>. You can also contact us here:</p>
+        </div>
+    </div>
+    <div class="row">
+        <div>
+            <div id="formSuccess" style="display: none;">
+                <p>Thank you! Your form has now been submitted.</p>
+            </div>
+            <form id="formRequest">
+                <!-- for[s = sender, c = company]-->
+                <div class="form-group col-sm-6">
+                    <label for="sfName">First Name</label>
+                    <input type="text" class="form-control" id="slName" placeholder="" required>
+                </div>
+                <div class="form-group col-sm-6">
+                    <label for="slName">Last Name</label>
+                    <input type="text" class="form-control" id="slName" placeholder="" required>
+                </div>
+                <div class="form-group col-sm-6">
+                    <label for="sName">Title</label>
+                    <input type="text" class="form-control" id="sTitle" placeholder="">
+                </div>
+                <div class="form-group col-sm-6">
+                    <label for="eAddress">Email</label>
+                    <input type="email" class="form-control" id="eAddress" placeholder="" required>
+                </div>
+                <div class="form-group col-xs-12">
+                    <label for="cName">FI Name</label>
+                    <input type="text" class="form-control" id="cName" placeholder="" required>
+                </div>
+                <div class="form-group col-sm-6">
+                    <label for="cAddress">FI Address</label>
+                    <input type="text" class="form-control" id="cAddress" placeholder="">
+                </div>
+                <div class="form-group col-sm-6">
+                    <label for="cAddressAdd">FI Address <small>(Suite, Floor #)</small></label>
+                    <input type="text" class="form-control" id="cAddressAdd" placeholder="">
+                </div>
+                <div class="form-group col-sm-6">
+                    <label for="cCity">City</label>
+                    <input type="text" class="form-control" id="cCity" placeholder="">
+                </div>
+                <div class="form-group col-sm-6">
+                    <label for="cState">State</label>
+                    <input type="text" class="form-control" id="cState" placeholder="">
+                </div>
+                <div class="form-group col-sm-6">
+                    <label for="cZip">Zip</label>
+                    <input type="text" class="form-control" id="cZip" placeholder="">
+                </div>
+                <div class="form-group col-sm-6">
+                    <label for="sPhone">Phone</label>
+                    <input type="text" class="form-control" id="sPhone" placeholder="" required>
+                </div>
+                <div class="form-group col-sm-12">
+                    <label for="sMessage">Message</label>
+                    <textarea type="text" class="form-control" rows="5" id="sMessage" placeholder=""></textarea>
+                </div>
+                <button type="submit" value="Submit" data-loading-text="Sending...">SUBMIT</button>
+            </form>
+        </div>
+    </div>
+</div>
+<div class="container-fuild gray-light footer">
+    <div class="row">
+        <!-- social nav -->
+        <ul class="nav nav-social text-right">
+            <li>
+                <a target="_blank" ng-href="https://www.linkedin.com/company/10571449" title="Social LinkedIn"><img src="styles/img/icon_l.svg" alt="Social LinkedIn"></a>
+            </li>
+            <li>
+                <a target="_blank" ng-href="https://www.facebook.com/jackhenrybanking" title="Social Facebook"><img src="styles/img/icon_f.svg" alt="Social Facebook"></a>
+            </li>
+            <li>
+                <a target="_blank" ng-href="https://twitter.com/JHABanking" title="Social Twitter"><img src="styles/img/icon_t.svg" alt="Social Twitter"></a>
+            </li>
+            <li>
+                <a target="_blank" ng-href="https://plus.google.com/+Jackhenrybanking" title="Social Google+"><img src="styles/img/icon_g.svg" alt="Social Google+"></a>
+            </li>
+            <li>
+                <a target="_blank" ng-href="http://discover.jackhenry.com/strategicallyspeaking" title="Social Blog">Blog</a>
+            </li>
+        </ul>
+        <div class="text-right">
+            <small>&copy; 2016 Jack Henry &amp; Associates, Inc.&reg;</small>
+        </div>
+    </div>
+</div>
+
+<div ui-view="modal" autoscroll="false" class="ui-view-container" state-loader></div>

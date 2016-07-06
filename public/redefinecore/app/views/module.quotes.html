@@ -1,0 +1,9 @@
+<div class="slider">
+    <blockquote class="slide" ng-repeat="component in components" ng-show="component.visible">{{component.quote}}
+        <cite>{{component.cite}}</cite>
+    </blockquote>
+    <div class="arrows">
+        <button class="btn btn-info" ng-click="prev()">Previous</button>
+        <button class="btn btn-info" ng-click="next()">Next</button>
+    </div>
+</div>

@@ -1,0 +1,21 @@
+<div class="container" ng-controller="CancelController as guest">
+    <div class="row">
+        <div class="modal-box loginBox primary text-center">
+            <h1>Tell us your name for a more<br> personalized experience:</h1>
+            <br>
+            <form ng-submit="guest.getPurlName(field)">
+                <div class="form-group text-left">
+                    <input class="form-control" type="text" name="field" ng-model="field">
+                </div>
+                <div class="form-group">
+                    <a class="btn center-block" type="submit" value="Submit">Submit</a>
+                </div>
+                <div class="form-group text-center">
+                    <label>
+                        <input type="checkbox" ng-click="guest.cancel()"> continue as guest
+                    </label>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
