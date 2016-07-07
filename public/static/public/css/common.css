@@ -1,0 +1,649 @@
+/* Style Guide – Mobile First
+    For: JHA Silverlake
+    Author: CR Rollyson
+
+    0. =Fonts & Colors
+    1. =Setup
+    2. =Modules (as independent units made up of components)
+    3. =Components (as group of reusable code containing more than one element)
+    4. =Classes
+    5. =Responsive
+
+    Colors:
+    primary:        #005479; acts as background when applied to container
+    gray-light:     #e0e1e2;
+    gray-medium:    #58595b;
+    gray-dark:      #353637;
+*/
+
+
+/*#####################
+    1. =Fonts & Colors
+#####################*/
+
+@font-face {
+    font-family: 'Source Sans Pro Extra-Light';
+    src: url('../fonts/SourceSansPro-ExtraLight.eot');
+    src: local('☺'), url('../fonts/SourceSansPro-ExtraLight.woff') format('woff'), url('../fonts/SourceSansPro-ExtraLight.ttf') format('truetype'), url('../fonts/SourceSansPro-ExtraLight.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Source Sans Pro Light';
+    src: url('../fonts/SourceSansPro-Light.eot');
+    src: local('☺'), url('../fonts/SourceSansPro-Light.woff') format('woff'), url('../fonts/SourceSansPro-Light.ttf') format('truetype'), url('../fonts/SourceSansPro-Light.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Source Sans Pro Semi-Bold';
+    src: url('../fonts/SourceSansPro-Semibold.eot');
+    src: local('☺'), url('../fonts/SourceSansPro-Semibold.woff') format('woff'), url('../fonts/SourceSansPro-Semibold.ttf') format('truetype'), url('../fonts/SourceSansPro-Semibold.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Source Sans Pro Bold';
+    src: url('../fonts/SourceSansPro-Bold.eot');
+    src: local('☺'), url('../fonts/SourceSansPro-Bold.woff') format('woff'), url('../fonts/SourceSansPro-Bold.ttf') format('truetype'), url('../fonts/SourceSansPro-Bold.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+.primary {
+    color: #005479;
+}
+
+div.primary {
+    background: #005479;
+    color: #fff;
+}
+
+div.gray-light {
+    background: #e0e1e2;
+    color: inherit;
+}
+
+div.gray-dark {
+    background: #353637;
+    color: #fff;
+}
+
+div.gray-dark a {
+    background: #56565a;
+    border: 1px solid #fff;
+    color: #fff;
+}
+
+div.primary a.btn {
+    border: 1px solid #fff;
+    color: #fff;
+}
+
+/*#####################
+     =Setup
+#####################*/
+
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    color: #58595b;
+    font: 18px/23px 'Source Sans Pro Light';
+    margin: 0;
+    overflow-x: hidden;
+    padding: 40px 0 0;
+}
+
+body.modal-open {
+    width: 100%;
+    position: relative;
+}
+
+body div.main {
+    overflow: hidden;
+}
+
+h1,
+h2,
+h3 {
+    font: 32px/39px 'Source Sans Pro Semi-Bold';
+}
+
+h1 {
+    color: #fff;
+}
+
+h2 {
+    color: #005479;
+    text-transform: capitalize;
+}
+
+h3 {
+    color: #fff;
+    text-transform: uppercase;
+}
+
+h4 {
+
+}
+
+.container-fuild.primary h3 {
+    color: #fff;
+}
+
+strong {
+    font-family: 'Source Sans Pro Bold';
+}
+
+em {
+    font-family: 'Source Sans Pro Semi-Bold';
+    padding: 0 1px;
+}
+
+sup {
+    font-size: 80%;
+    top: -0.15em;
+}
+
+a,
+a:hover,
+a:focus,
+a:active:focus,
+a.active:focus,
+button,
+button:hover,
+button:focus,
+button:active:focus,
+button.active:focus,
+.navbar-toggle {
+    background: transparent;
+    outline: none;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+}
+
+a,
+button {
+    transition: all .13s ease-in-out;
+    -moz-transition: all .13s ease-in-out;
+    -o-transition: all .13s ease-in-out;
+    -webkit-transition: all .13s ease-in-out;
+}
+
+button {
+    border: none;
+    text-transform: uppercase;
+}
+
+
+a.btn,
+form button,
+.modal-box .btn {
+    border: 1px solid #005479;
+    border-radius: 0;
+    margin: 10px;
+    min-width: 350px;
+    padding: 10px;
+    text-transform: uppercase;
+}
+
+form button,
+.modal-box .btn {
+    color: #005479;
+    margin: 10px 15px;
+}
+
+.btn.btn-info {
+    background: transparent;
+    border: 1px solid #005479;
+    border-radius: 0;
+    color: #005479;
+}
+
+button:hover {
+    color: #2196f3;
+}
+
+form button:hover,
+.modal-box .btn:hover,
+.btn.btn-info:hover {
+    background: #005479;
+    border: 1px solid #005479;
+    color: #fff;
+}
+
+
+label,
+.form-control {
+    font: 17px/25px 'Source Sans Pro Semi-Bold';
+}
+
+label {
+    text-transform: uppercase;
+}
+
+small {
+    font-size: 80%;
+}
+
+
+/*#####################
+     =Modules
+#####################*/
+
+.container,
+.container-fluid {
+    padding: 15px;
+}
+
+.navbar-fixed-top {
+    background: #231f20;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.4);
+    -moz-box-shadow: 0 2px 12px rgba(0, 0, 0, 0.4);
+    -webkit-box-shadow: 0 2px 12px rgba(0, 0, 0, 0.4);
+}
+
+.nav>li {
+    background: none;
+}
+
+.nav>li>a {
+    color: #47a5df;
+}
+
+.nav .active,
+.nav>li:hover a,
+.nav>li>a:hover,
+.nav li a:focus {
+    background: 0;
+    color: #fff;
+    cursor: pointer;
+}
+
+.navbar-header {
+    float: none;
+}
+
+.navbar-brand {
+    height: auto;
+}
+
+.navbar-toggle {
+    color: #e0e1e2;
+    font-size: 20px;
+}
+.navbar-toggle:hover, .navbar-toggle:focus {
+    color: #fff;
+}
+.navbar-nav {
+    padding: 10px 30px 0;
+}
+
+.navbar-toggle {
+    display: block;
+}
+
+.navbar-collapse {
+    border-top: 1px solid transparent;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+.navbar-collapse.collapse {
+    display: none !important;
+}
+
+.navbar-collapse.collapse.in {
+    display: block !important;
+}
+
+.nav.nav-social>li,
+.nav.nav-social>li>a {
+    display: inline-block;
+    padding: 0;
+    text-align: right;
+}
+
+.nav.nav-social>li>a>img {
+    width: 50px;
+}
+
+.hero {
+    position: relative;
+}
+
+.hero div {
+    position: absolute;
+    /* fallback for IE8 */
+    top: 38%;
+    /* - 48px to account for line-height */
+    top: calc(50% - 48px);
+    left: 0;
+    text-align: center;
+    width: 100%;
+}
+
+.footer {
+    padding: 1% 3%;
+    color: #353637;
+    position: relative;
+    z-index: 0;
+    color: #fff;
+}
+
+
+button.close {
+    background: transparent;
+    border: 0;
+    color: #2a729a;
+    font: 28px 'Source Sans Pro Bold';
+    line-height: 20px;
+    opacity: 1;
+    text-shadow: 0 0 0 #fff;
+}
+
+button.close:hover {
+    background: transparent;
+    color: #244c62;
+    text-shadow: 0 0 0 #000;
+}
+
+
+/*#####################
+    =Components
+#####################*/
+
+.card {
+    overflow: visible;
+    /*border: 1px solid red;*/
+    position: relative;
+    margin-top: 50px;
+    padding-top: 25px;
+}
+
+.card div {
+    background: #fff;
+    border: 1px solid #cbcdce;
+    padding: 50px 15px 15px;
+    height: 100%;
+    overflow: visible;
+}
+
+.card img {
+    position: absolute;
+    top: -25px;
+    left: calc(50% - 50px);
+}
+
+.card h4 {
+    font: 22px/26px 'Source Sans Pro Semi-Bold';
+    color: #000;
+    text-align: center;
+}
+
+.card p {
+    border-bottom: 1px solid #efefef;
+    color: #808081;
+    display: block;
+    height: 140px;
+    padding: 5px 10px 15px;
+    text-align: left;
+}
+
+.card button {
+    color: #005479;
+    padding: 0;
+    width: 100%;
+}
+
+.card button:hover {
+    color: #2196f3;
+}
+
+
+/* Blockquote*/
+
+blockquote {
+    border-left: 0;
+    font-size: 22px;
+    text-align: center;
+}
+
+blockquote:first-of-type {
+    display: block;
+}
+
+blockquote cite {
+    display: block;
+    font: italic 70% 'Source Sans Pro Semi-Bold';
+    margin-top: 15px;
+}
+
+blockquote cite::before {
+    content: "–";
+}
+
+.slider {
+    height: 200px;
+}
+.slider .slide {
+    height: 150px;
+}
+
+[data-rotator] button {
+    color: #efefef;
+}
+
+[data-rotator] button:hover {
+    color: #ff9900;
+}
+
+[data-rotator] button.current {
+    color: #56565a;
+}
+
+
+.modal-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: -moz-linear-gradient(top, rgba(20, 28, 35, 0.9) 0%, rgba(125, 185, 232, .4) 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(30, 87, 153, 1)), color-stop(100%, rgba(125, 185, 232, 1)));
+    background: -webkit-linear-gradient(top, rgba(20, 28, 35, 0.9) 0%, rgba(20, 28, 35, .4) 100%);
+    background: -o-linear-gradient(top, rgba(20, 28, 35, 0.9) 0%, rgba(20, 28, 35, .4) 100%);
+    background: -ms-linear-gradient(top, rgba(20, 28, 35, 0.9) 0%, rgba(20, 28, 35, .4) 100%);
+    background: linear-gradient(to bottom, rgba(20, 28, 35, 0.9) 0%, rgba(20, 28, 35, .4) 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', endColorstr='#007db9e8', GradientType=0);
+    z-index: 1031;
+}
+
+.modal-holder {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: transparent;
+    z-index: 1031;
+    margin: 0;
+    overflow-y: scroll;
+}
+
+.modal-box {
+    margin: 50px auto 0;
+    width: 100%;
+    background: #fff;
+    padding: 30px;
+    border-radius: 4px;
+    box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+.video {
+    width: 60%;
+}
+.video button.close {
+    margin-right: -36px;
+    background: rgba(0, 0, 0, 0.33);
+    color: #fff;
+    padding: 10px;
+}
+
+.modal-box.video .wrapper {
+    z-index: -1;
+}
+
+.modal-box img,
+.modal-box h2,
+.modal-box h3 {
+    text-align: center;
+}
+
+.modal-box img {
+    display: block;
+    margin: -80px auto 0;
+}
+
+.modal-box h2 {
+    margin-bottom: 5px;
+}
+
+.modal-box h3 {
+    color: #2a729a;
+    font-size: 110%;
+    margin: 0 0 20px;
+    line-height: 120%;
+}
+
+/*#####################
+    Classes
+#####################*/
+
+.center-block {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    float: none;
+}
+
+.img-responsive {
+    margin: 0 auto;
+    width: auto !important;
+}
+
+.wrapper {
+    background: #CCC;
+    height: 100%;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.h_iframe {
+    position: relative;
+}
+
+.h_iframe .ratio {
+    display: block;
+    height: auto;
+    width: 100%;
+}
+
+.h_iframe iframe {
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+
+/*#####################
+    Animation
+#####################*/
+
+.slide.ng-hide-add,
+.slide.ng-hide-remove {
+  -webkit-transition: all linear 0.5s;
+  -moz-transition: all linear 0.5s;
+  -o-transition: all linear 0.5s;
+  transition: all linear 0.5s;
+  display: block!important;
+}
+.slide.ng-hide-add.ng-hide-add-active,
+.slide.ng-hide-remove {
+  opacity: 0;
+}
+.slide.ng-hide-add,
+.slide.ng-hide-remove.ng-hide-remove-active {
+  opacity: 1;
+}
+
+
+/*#####################
+     Responsive
+#####################*/
+
+@media(max-width:1002px) {
+    .nav>li {
+        float: none;
+    }
+
+    .nav>li>a {
+        padding: 10px;
+        text-align: right;
+    }
+}
+
+@media(max-width:723px) {
+    body {
+        padding-top: 50px;
+    }
+    h1, h2, h3, blockquote {
+        font-size: inherit;
+        line-height: inherit;
+    }
+    .container {
+        padding: 15px 35px;
+    }
+    .hero div {
+        top: 8%;
+        top: calc(50% - 65px);
+    }
+    .video {
+        width: 80%;
+    }
+    .slider {
+        height: 330px;
+    }
+    .slider .slide {
+        height: 250px;
+    }
+
+    a.btn, form button,
+    .modal-box .btn {
+        margin: 10px 0;
+        min-width: auto;
+        white-space: normal;
+        width: 100%;
+    }
+
+
+    .text-right {
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width: 570px) {}

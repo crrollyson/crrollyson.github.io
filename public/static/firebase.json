@@ -1,0 +1,15 @@
+{
+  "firebase use --add": "dyxjwea",
+  "public": "public",
+  "ignore": [
+    "firebase.json",
+    "**/.*",
+    "**/node_modules/**"
+  ],
+  "hosting": {
+    "public": "public"
+  },
+  "database": {
+    "rules": "database.rules.json"
+  }
+}
